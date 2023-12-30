@@ -1,0 +1,493 @@
+/* Estilos Gerais */
+
+main {
+    padding-bottom: 100px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container-header {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+
+#c12345 {
+    border: 2px dashed #007bff;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content-placeholder {
+    border: 2px dashed #007bff;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos para a seção Sobre */
+
+.sobre-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.sobre-imagem {
+    margin-right: 30px;
+}
+
+.sobre-texto {
+    text-align: left;
+    max-width: 600px;
+}
+
+.sobre-texto h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #0056b3;
+}
+
+.sobre-texto p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    font-size: 1em;
+    padding: 15px 30px;
+    background-color: #007bff;
+    margin-top: 20px;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+
+}
+
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-imagem {
+        margin: 0 0 20px;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .cta-button {
+        margin-top: 20px;
+    }
+}
+
+/* Estilização da grade de clientes */
+
+.clientes-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.clientes-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.clientes-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.clientes-grid img {
+    flex: 1;
+    max-width: calc(33.333% - 40px);
+    height: auto;
+    background-color: #f2f2f2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .clientes-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .clientes-grid img {
+        max-width: 100%;
+    }
+}
+
+/* Estilos específicos para a seção Serviços */
+
+.servicos-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.servico-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.servico-item:hover {
+    transform: translateY(-5px);
+}
+
+.servico-item img {
+    width: 100px;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.servico-item h3 {
+    align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Estilos para a seção de Projetos */
+
+.projetos-container {
+    padding: 40px 0;
+    background-color: #fff;
+
+    text-align: center;
+}
+
+.projetos-grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.projeto-item {
+    width: calc(33.333% - 20px);
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.projeto-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.projeto-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto-item:hover img {
+    transform: scale(1.05);
+}
+
+.projeto-descricao {
+    padding: 15px;
+    text-align: left;
+}
+
+.projeto-descricao h3 {
+    color: #0056b3;
+    margin: 10px 0;
+}
+
+.projeto-descricao p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .projetos-grid {
+        justify-content: space-around;
+    }
+}
+
+/*Depoimentos */
+
+.depoimentos-container {
+    text-align: center;
+    margin: 40px auto;
+    position: relative;
+    max-width: 1100px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.depoimentos-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.depoimento-item {
+    scroll-snap-align: start;
+    flex: none;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.depoimento-item p {
+    font-style: italic;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.depoimento-item h3 {
+    margin-top: 10px;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .depoimento-item {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+}
+
+/* Contato */
+
+.contato-container {
+    background-color: #f0f0f0;
+    padding: 40px;
+    text-align: center;
+}
+
+.contato-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contato-form label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    clear: both;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info,
+.footer-contact {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-info,
+    .footer-contact {
+        margin: 0;
+    }
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

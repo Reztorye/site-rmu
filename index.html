@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rui Mendes Ulrich - Eletricista Profissional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <img src="imagens/logo.png" alt="Logo Rui Mendes Ulrich" class="logo">
+            <nav>
+                <button id="menu-toggle" class="menu-toggle">☰</button>
+                <ul id="menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="sobre-container">
+            <div class="sobre-imagem">
+                <img src="imagens/logo.png" alt="Rui Mendes Ulrich Eletricista Profissional">
+            </div>
+            <div class="sobre-texto">
+                <h2>Sobre Rui Mendes Ulrich</h2>
+                <p>Rui Mendes Ulrich é um eletricista experiente de Santos, conhecido por sua expertise e compromisso
+                    com a excelência. Com anos dedicados à eletricidade, ele se destaca pela realização de grandes
+                    projetos com precisão e eficiência. Trabalhando de forma independente, Rui garante que cada serviço
+                    seja executado com a máxima segurança e qualidade, construindo soluções elétricas duradouras e
+                    confiáveis. Escolher Rui é optar por um profissional dedicado, pronto para atender às suas
+                    necessidades elétricas com habilidade e atenção personalizada.</p>
+                <a href="#contato" class="cta-button">Fale Comigo</a>
+            </div>
+        </section>
+
+
+
+        <section id="servicos" class="servicos-container">
+            <h2>Serviços</h2>
+            <div class="servicos-grid">
+                <article class="servico-item">
+                    <img src="imagens/instalacao.png" alt="Ícone de Instalação Elétrica">
+                    <h3>Instalação Elétrica</h3>
+                    <p>Realizamos instalações elétricas residenciais e comerciais, seguindo rigorosamente as normas
+                        técnicas para garantir a segurança e a eficiência energética.</p>
+                </article>
+
+                <article class="servico-item">
+                    <img src="imagens/light-bulb-transparent-free-png.png" alt="Ícone de Iluminação">
+                    <h3>Iluminação</h3>
+                    <p>Projetamos e instalamos sistemas de iluminação interna e externa, incluindo LED e iluminação
+                        inteligente, para realçar a beleza e a funcionalidade dos espaços.</p>
+                </article>
+
+                <article class="servico-item">
+                    <img src="imagens/icone-manutencao.png" alt="Ícone de Manutenção Elétrica">
+                    <h3>Manutenção Elétrica</h3>
+                    <p>Oferecemos manutenção elétrica preventiva e corretiva para garantir a operação segura e eficiente
+                        de suas instalações elétricas.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="clientes" class="clientes-container">
+            <h2>Experiência com Grandes Empresas</h2>
+            <div class="clientes-grid">
+                <img src="imagens/tomelogo-removebg-preview.png" alt="Empresa 1">
+                <img src="imagens/nordonlogo.png" alt="Empresa 2">
+                <img src="imagens/grupo-jcpm-logo-dk.png" alt="Empresa 3">
+            </div>
+        </section>
+
+
+        <section id="projetos" class="projetos-container">
+            <h2>Projetos Realizados</h2>
+            <div class="projetos-grid">
+                <div class="projeto-item" onclick="openLightbox('imagens/projeto1.jpg')">
+                    <img src="imagens/quadro.png" alt="Projeto Residencial">
+                    <div class="projeto-descricao">
+                        <h3>Projeto Residencial</h3>
+                        <p>Renovação completa do sistema elétrico.</p>
+                    </div>
+                </div>
+                <div class="projeto-item">
+                    <img src="imagens/iluminacaoloja.png" alt="Design de Iluminação para Loja Conceito">
+                    <div class="projeto-descricao">
+                        <h3>Design de Iluminação para Loja Conceito</h3>
+                        <p>Criação de um projeto de iluminação inovador para uma loja de varejo, utilizando luminárias
+                            LED customizadas.</p>
+                    </div>
+                </div>
+                <div class="projeto-item">
+                    <img src="imagens/renovacao.png" alt="Modernização Elétrica de Edifício Histórico">
+                    <div class="projeto-descricao">
+                        <h3>Modernização Elétrica de Edifício Histórico</h3>
+                        <p>Atualização do sistema elétrico de um edifício histórico, preservando sua integridade
+                            arquitetônica.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img" src="">
+            </div>
+        </section>
+
+        <section id="depoimentos" class="depoimentos-container">
+            <h2>Depoimentos de Clientes</h2>
+            <div class="depoimentos-carousel">
+                <div class="depoimento-item">
+                    <p>"Nunca vi alguém tão dedicado e atento aos detalhes quanto o Rui. A instalação elétrica do meu
+                        restaurante foi um sucesso retumbante, graças a ele!"</p>
+                    <h3>Isabela Freitas</h3>
+                </div>
+                <div class="depoimento-item">
+                    <p>"Depois de várias tentativas frustradas com outros profissionais, o Rui resolveu nossos problemas
+                        elétricos persistentes. Seu trabalho é de primeira!"</p>
+                    <h3>Carlos Eduardo</h3>
+                </div>
+                <div class="depoimento-item">
+                    <p>"Rui é o tipo de profissional que você quer manter por perto. Confiável, experiente e
+                        extremamente profissional. O serviço dele é impecável!"</p>
+                    <h3>Mariana Rocha</h3>
+                </div>
+                <div class="depoimento-item">
+                    <p>"O trabalho do Rui nos proporcionou tranquilidade. Ele não só fez um excelente trabalho com a
+                        nossa rede elétrica, como também nos explicou tudo claramente."</p>
+                    <h3>Roberto Almeida</h3>
+                </div>
+            </div>
+            <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="carousel-btn next-btn" onclick="moveCarousel(1)">&#10095;</button>
+        </section>
+    </main>
+
+    <section id="contato" class="contato-container">
+        <h2>Contato</h2>
+        <form id="formContato" class="contato-form" action="https://formspree.io/f/xnqeqnba" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>© 2023 Rui Mendes Ulrich - Todos os direitos reservados</p>
+            </div>
+            <div class="footer-contact">
+                <p>Telefone: <a href="tel:+xxxxxx">+55 (13) 98147-4506</a></p>
+                <p>Email: <a href="mailto:contato@ruimendesulrich.com">ruimendes.ulrich@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
