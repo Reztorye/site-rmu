@@ -491,3 +491,142 @@ footer {
         margin: 10px 0;
     }
 }
+
+@media (max-width: 768px) {
+
+    .container-header,
+    .sobre-container,
+    .clientes-container,
+    .depoimentos-container,
+    .contato-container,
+    .footer-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo {
+        height: auto;
+        /* Ajusta o tamanho do logo */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Seção Sobre */
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-imagem,
+    .sobre-texto {
+        width: 100%;
+        /* Garante que a imagem e o texto ocupem toda a largura disponível */
+    }
+
+    /* Seção Clientes */
+    .clientes-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clientes-grid img {
+        max-width: 100%;
+    }
+
+    /* Seção Serviços */
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        /* Ajusta os serviços para uma única coluna */
+    }
+
+    /* Seção Projetos */
+    .projetos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .depoimentos-carousel,
+    .depoimento-item {
+        width: 100%;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .contato-form {
+        padding: 0;/
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .container-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 80%;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .contato-container {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-form input,
+    .contato-form textarea,
+    .btn-submit {
+        width: calc(100% - 40px);
+        margin: 10px 0;
+    }
+}
+
+.logo-secundaria {
+    display: none;
+}
