@@ -21,35 +21,30 @@ function closeLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.depoimentos-carousel');
+    const slides = document.querySelectorAll('.depoimento-item');
+    if (!carousel || slides.length === 0) return;
+    
     let slideIndex = 0;
-    const slides = document.getElementsByClassName('depoimento-item');
     const totalSlides = slides.length;
 
-    function showSlides(n) {
-        if (n >= totalSlides) {
-            slideIndex = 0;
-        } else if (n < 0) {
-            slideIndex = totalSlides - 1;
-        } else {
-            slideIndex = n;
-        }
-
-        Array.from(slides).forEach(slide => {
-            slide.style.display = "none";
-        });
-
-        slides[slideIndex].style.display = "block";
-    }
-
-    showSlides(slideIndex);
-
     window.moveCarousel = function (step) {
-        showSlides(slideIndex += step);
+        slideIndex += step;
+        if (slideIndex >= totalSlides) slideIndex = 0;
+        if (slideIndex < 0) slideIndex = totalSlides - 1;
+        
+        // Scroll to the specific slide
+        const targetSlide = slides[slideIndex];
+        carousel.scrollTo({
+            left: targetSlide.offsetLeft - carousel.offsetLeft,
+            behavior: 'smooth'
+        });
     };
 
+    // Auto-advance
     setInterval(function () {
-        showSlides(slideIndex += 1);
-    }, 3000);
+        moveCarousel(1);
+    }, 4000);
 });
 
 document.getElementById('formContato').addEventListener('submit', function (event) {
@@ -58,15 +53,36 @@ document.getElementById('formContato').addEventListener('submit', function (even
     var nome = document.getElementById('nome').value;
     var email = document.getElementById('email').value;
     var mensagem = document.getElementById('mensagem').value;
+    var form = this;
+    var submitBtn = form.querySelector('.btn-submit');
+    var originalText = submitBtn.textContent;
 
     if (nome && email && mensagem) {
-        console.log('Nome:', nome);
-        console.log('Email:', email);
-        console.log('Mensagem:', mensagem);
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
 
-        this.reset();
+        var data = new FormData(form);
 
-        alert('Mensagem enviada com sucesso!');
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                form.reset();
+                alert('Mensagem enviada com sucesso!');
+            } else {
+                alert('Ocorreu um erro ao enviar a mensagem. Tente novamente.');
+            }
+        }).catch(error => {
+            alert('Erro de conexão ao enviar a mensagem.');
+        }).finally(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
+
     } else {
         alert('Por favor, preencha todos os campos.');
     }

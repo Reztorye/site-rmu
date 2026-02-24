@@ -1,3 +1,9 @@
+:root {
+    --primary: var(--primary);
+    --primary-dark: var(--primary-dark);
+    --bg-light: var(--bg-light);
+    --text-main: var(--text-main);
+}
 /* Estilos Gerais */
 
 main {
@@ -7,7 +13,7 @@ main {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-main);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +21,7 @@ body {
 
 /* Cabeçalho e Navegação */
 header {
-    background: #007bff;
+    background: var(--primary);
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -62,31 +68,6 @@ nav ul li a:hover {
     font-size: 24px;
 }
 
-#c12345 {
-    border: 2px dashed #007bff;
-    background-color: #f0f0f0;
-    color: #333;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.content-placeholder {
-    border: 2px dashed #007bff;
-    background-color: #f0f0f0;
-    color: #333;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-
-    max-width: 80%;
-    box-sizing: border-box;
-}
-
 /* Estilos específicos para a seção Sobre */
 
 .sobre-container {
@@ -111,7 +92,7 @@ nav ul li a:hover {
 .sobre-texto h2 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
-    color: #0056b3;
+    color: var(--primary-dark);
 }
 
 .sobre-texto p {
@@ -123,7 +104,7 @@ nav ul li a:hover {
 .cta-button {
     font-size: 1em;
     padding: 15px 30px;
-    background-color: #007bff;
+    background-color: var(--primary);
     margin-top: 20px;
     color: white;
 
@@ -135,7 +116,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-dark);
 
 }
 
@@ -166,7 +147,7 @@ nav ul li a:hover {
 }
 
 .clientes-container h2 {
-    color: #333;
+    color: var(--text-main);
     margin-bottom: 20px;
 }
 
@@ -217,7 +198,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #f9f9f9;
+    background: var(--bg-light);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -261,7 +242,7 @@ nav ul li a:hover {
 
 .projeto-item {
     width: calc(33.333% - 20px);
-    background: #f9f9f9;
+    background: var(--bg-light);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0 10px;
@@ -289,7 +270,7 @@ nav ul li a:hover {
 }
 
 .projeto-descricao h3 {
-    color: #0056b3;
+    color: var(--primary-dark);
     margin: 10px 0;
 }
 
@@ -329,7 +310,7 @@ nav ul li a:hover {
     margin: 0 20px;
     padding: 20px;
     box-sizing: border-box;
-    background: #f9f9f9;
+    background: var(--bg-light);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -339,14 +320,14 @@ nav ul li a:hover {
 
 .depoimento-item p {
     font-style: italic;
-    color: #333;
+    color: var(--text-main);
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
 .depoimento-item h3 {
     margin-top: 10px;
-    color: #007bff;
+    color: var(--primary);
     font-size: 1.2rem;
 }
 
@@ -354,7 +335,7 @@ nav ul li a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #007bff;
+    background: var(--primary);
     border: none;
     color: white;
     padding: 10px 20px;
@@ -411,7 +392,7 @@ nav ul li a:hover {
 }
 
 .btn-submit {
-    background-color: #007bff;
+    background-color: var(--primary);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -422,14 +403,14 @@ nav ul li a:hover {
 }
 
 .btn-submit:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-dark);
 }
 
 
 /* Footer */
 
 footer {
-    background-color: #007bff;
+    background-color: var(--primary);
     color: white;
     padding: 20px 0;
     text-align: center;
